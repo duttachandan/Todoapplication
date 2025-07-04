@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Data of Students</h1>
+    <table>
+      <tr>
+        <th>Student Photo</th>
+        <th>Students Name</th>
+        <th>Students Username</th>
+      </tr>
+      <% arr.forEach((elem)=>{ %>
+      <tr>
+        <td>
+          <img src="<%= elem.avatar %>" alt="User Avatar" class="avatar-img" />
+        </td>
+        <td><%= elem.username %></td>
+        <td><%= elem.email %></td>
+        <td>
+          <form action="/post/edit/<%= elem.userId %>" method="post">
+            <button class="edit" type="submit">Edit</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
