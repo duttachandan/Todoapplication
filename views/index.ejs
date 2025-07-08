@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Data of Students</h1>
+    <h1 style="text-align: center; margin-top: 50px">
+      Data of Students <%= count %>
+    </h1>
+    <br />
+    <br />
     <table>
       <tr>
-        <th>Student Photo</th>
-        <th>Students Name</th>
-        <th>Students Username</th>
+        <th>Student id</th>
+        <th>Students ussername</th>
+        <th>Students email</th>
       </tr>
       <% arr.forEach((elem)=>{ %>
+
       <tr>
-        <td>
-          <img src="<%= elem.avatar %>" alt="User Avatar" class="avatar-img" />
-        </td>
+        <td><%= elem.id %></td>
         <td><%= elem.username %></td>
         <td><%= elem.email %></td>
         <td>
-          <form action="/post/edit/<%= elem.userId %>" method="post">
-            <button class="edit" type="submit">Edit</button>
-          </form>
+          <a href="/post/edit/<%= elem.id %>" class="edit">Edit</a>
         </td>
       </tr>
       <% }) %>

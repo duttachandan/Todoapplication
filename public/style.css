@@ -11,6 +11,10 @@ th {
   border-collapse: collapse;
 }
 
+a {
+  text-decoration: none;
+}
+
 td,
 th {
   padding: 10px 15px;
@@ -34,10 +38,11 @@ table {
   background: green;
   color: white;
   font-size: 0.8rem;
-  cursor:pointer;
-  border:none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
 }
 
-.edit:hover{
+.edit:hover {
   background: rgb(0, 168, 0);
 }

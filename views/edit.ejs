@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit</title>
+  </head>
+  <body>
+    <!-- <h2><%= elem.id %></h2> -->
+    <form action="/edit/<%= elem.id %>?_method=PUT" method="post">
+      <h1>
+        Change the Credentials of Id: <span ><%= elem.id %> </span>
+      </h1>
+      <label for="user-name">User Name:</label>
+      <input
+        type="text"
+        name="username"
+        id="user-name"
+        value="<%= elem.username %>"
+      />
+      <br />
+      <br />
+      <label for="user-name">User Email:</label>
+      <input
+        type="text"
+        name="email"
+        id="user-email"
+        value="<%= elem.email %>"
+      />
+      <br />
+      <br />
+      <label for="password">Confirm Password:</label>
+      <input type="password" name="password" id="password" />
+      <br />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
